@@ -18,7 +18,6 @@ describe('Pizza App', () => {
     const pizzaForm = () => cy.get('#pizza-form')
     const sauce = () => cy.get('#Original-red')
 
-
     // const textInput = () => cy.get('input[name=text]')
     // const authorInput = () => cy.get('input[name=author]')
 
@@ -49,8 +48,8 @@ describe('Pizza App', () => {
         pepperoni().check()
         sauce().check()
         sausage().check()
-        box2().type('some text')
-        box().type('some text')
+        box2().type('tony stark')
+        box().type('tony stark')
         pizzaForm().submit()
     })
     
