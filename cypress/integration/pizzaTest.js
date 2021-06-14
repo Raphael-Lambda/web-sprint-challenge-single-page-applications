@@ -16,6 +16,7 @@ describe('Pizza App', () => {
     // const sauce = () => cy.get('#Original-red')
     // const submitbutton = () => cy.get('#order-button')
     const pizzaForm = () => cy.get('#pizza-form')
+    const sauce = () => cy.get('#Original-red')
 
 
     // const textInput = () => cy.get('input[name=text]')
@@ -44,9 +45,13 @@ describe('Pizza App', () => {
     it('submit form', () => {
         //to create an asserstion use 'expect'
         pizzaButton().click()
+        onions().check()
+        pepperoni().check()
+        sauce().check()
+        sausage().check()
+        box2().type('some text')
+        box().type('some text')
         pizzaForm().submit()
-
-        
     })
     
 })
