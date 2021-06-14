@@ -62,10 +62,10 @@ const App = () => {
     then(response => {
       setOrder([...order, response.data])})
     .catch(err => console.log(err))
-    .finally(() => {
-      setPizza(defaultPizza);
-      history.push('/congrats');
-    })
+    // .finally(() => {
+    //   setPizza(defaultPizza);
+    //   history.push('/congrats');
+    // })
   }
 
   const change = (name, value) => {
