@@ -64,7 +64,6 @@ const OrderPizza = ({ submitForm, change, pizza, toppings, errors, disable, topp
 
     const onsubmit = e => {
         e.preventDefault()
-        console.log("submitting")
         submitForm()
     }
 

@@ -8,6 +8,7 @@ const schema = yup.object().shape({
     size: yup.string().oneOf(['Medium', 'Large', 'Small']),
     more: yup.string(), 
     quantity: yup.number(),
+    substitute: yup.bool().required().oneOf([false, true]),
     Onions: yup.bool().required().oneOf([false, true]),
     ['Green Peppers']: yup.bool().required().oneOf([false, true]),
     ['Canadian Bacon']: yup.bool().required().oneOf([false, true]),
@@ -21,8 +22,7 @@ const schema = yup.object().shape({
     ['Artichoke Hearts']: yup.bool().required().oneOf([false, true]),
     ['Three Cheese']: yup.bool().required().oneOf([false, true]),
     ['Pineapple']: yup.bool().required().oneOf([false, true]),
-    ['Extra Cheese']: yup.bool().required().oneOf([false, true]),
-    substitute: yup.bool().required().oneOf([false, true]),
+    ['Extra Cheese']: yup.bool().required().oneOf([false, true])
 })
 
 export default schema
