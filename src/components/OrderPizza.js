@@ -93,16 +93,16 @@ const OrderPizza = ({ submitForm, change, pizza, toppings, errors, disable, topp
             </SubDiv>
             <TitleDiv>Choice of Sauce<Error>{errors.sauce}</Error></TitleDiv>
             <SubDiv>
-                <Label>Original red<input name="sauce" type="radio" value="Original red" checked={sauce === "Original red"} onChange={onchange}/></Label>
+                <Label>Original red<input name="sauce" id="Original-red" type="radio" value="Original red" checked={sauce === "Original red"} onChange={onchange}/></Label>
                 <Label>Garlic Ranch<input name="sauce" type="radio" value="Garlic Ranch" checked={sauce === "Garlic Ranch"} onChange={onchange}/></Label>
                 <Label>BBQ Sauce<input name="sauce" type="radio" value="BBQ Sauce" checked={sauce === "BBQ Sauce"} onChange={onchange}/></Label>
                 <Label>Spinach Alfredo<input name="sauce" type="radio" value="Spinach Alfredo" checked={sauce === "Spinach Alfredo"} onChange={onchange}/></Label>
             </SubDiv>
             <TitleDiv>Add Toppings <Error>{`You can choose ${toppingsLeft} more`}</Error></TitleDiv>
-            <SubDiv>
+            <SubDiv id="toppings">
                 {toppings.map(item => {
                     return (
-                    <Label key={item}>{item}<input name={item} type="checkbox" checked={pizza[item]} onChange={onchange}/></Label>
+                    <Label key={item}>{item}<input id={item} name={item} type="checkbox" checked={pizza[item]} onChange={onchange}/></Label>
                     )}
                 )}
             </SubDiv>
