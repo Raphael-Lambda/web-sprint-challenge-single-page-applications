@@ -3,7 +3,7 @@ import * as yup from 'yup'
 // const toppings = ['Onions', 'Green Peppers', 'Canadian Bacon', 'Pepperoni', 'Sausage', 'Spicy Italian Sausage', 'Grilled Chicken', 'Diced Tomatoes', 'Black Olives', 'Roasted garlic', 'Artichoke Hearts', 'Three Cheese', 'Pineapple', 'Extra Cheese']
 
 const schema = yup.object().shape({
-    customerName: yup.string().required("customer's name is required").min(3, "customer's name must be 3 characters minimum"),
+    customerName: yup.string().required("customer's name is required").min(2, "name must be at least 2 characters"),
     sauce: yup.string().oneOf(['Original red', 'Garlic Ranch', 'BBQ Sauce','Spinach Alfredo'], "You must choose a sauce"),
     size: yup.string().oneOf(['Medium', 'Large', 'Small']),
     more: yup.string(), 
