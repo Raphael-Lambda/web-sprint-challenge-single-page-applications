@@ -15,6 +15,8 @@ const OtherFood = styled.div`
     justify-content: space-evenly;
     align-content: space-around;
 `
+
+
 const foods = ["coffee", "hamburger", "salad", "pizza"]
 
 const Welcome = () => {

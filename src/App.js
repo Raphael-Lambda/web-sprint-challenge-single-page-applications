@@ -8,7 +8,8 @@ import Congrats from './components/Congrats'
 import PizzaHeader from './components/PizzaHeader'
 import Welcome from './components/Welcome'
 import schema from './components/formSchema'
-
+import data from './components/data'
+import Order from './components/Order'
 
 
 
@@ -83,13 +84,13 @@ const App = () => {
   }
 
 
-  
   return (
     <>
       <Route path="/" ><PizzaHeader/></Route>
       <Switch>
         <Route path="/pizza"><OrderPizza toppingsLeft={toppingsLeft} disable={disable} toppings={toppings} pizza={pizza} errors={errors} submitForm={submitForm} change={change}/></Route>
         <Route path="/congrats"><Congrats order={order} toppings={toppings}/></Route>
+        <Route path="/order/:name"><Order data={data}/></Route>
         <Route path="/" ><Welcome/></Route>
       </Switch>
       

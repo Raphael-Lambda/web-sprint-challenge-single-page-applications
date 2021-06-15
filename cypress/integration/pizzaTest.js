@@ -23,18 +23,15 @@ describe('Pizza App', () => {
 
     //it: keyword to create test
     it('add text to the box', () => {
-        //to create an asserstion use 'expect'
         pizzaButton().click()
         box().type('some text').should('have.value','some text')
     })
     it('add text to the box2', () => {
-        //to create an asserstion use 'expect'
         pizzaButton().click()
         box2().type('some text').should('have.value','some text')
     })
 
     it('select toppings', () => {
-        //to create an asserstion use 'expect'
         pizzaButton().click()
         onions().check().should('be.checked')
         pepperoni().check().should('be.checked')
@@ -42,7 +39,6 @@ describe('Pizza App', () => {
     })
 
     it('submit form', () => {
-        //to create an asserstion use 'expect'
         pizzaButton().click()
         onions().check()
         pepperoni().check()
